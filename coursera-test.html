@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ma première page HTML</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Common styles for all views */
+        .container {
+            display: inline-block;
+            border: 2px solid black;
+            padding: 20px;
+            background-color: gray;
+            position: relative;
+            margin: 10px; /* Ajoute une marge autour de chaque boîte pour l'espacement */
+        }
+
+        .right-word {
+            font-weight: bold;
+            float: right; /* Aligne les mots à droite */
+            margin-top: -15px;
+            margin-right: -20px;
+        }
+
+        .encadre1 {
+            border: 2px solid black; /* Ajoute une bordure noire autour des mots */
+            padding: 5px; /* Ajoute de la marge intérieure pour espacer le texte de la bordure */
+            width: auto;
+            border-right: none;
+            background-color: pink;
+        }
+
+        .encadre2 {
+            border: 2px solid black; /* Ajoute une bordure noire autour des mots */
+            padding: 5px; /* Ajoute de la marge intérieure pour espacer le texte de la bordure */
+            width: auto;
+            border-right: none;
+            background-color: yellow;
+        }
+
+        .encadre3 {
+            border: 2px solid black; /* Ajoute une bordure noire autour des mots */
+            padding: 5px; /* Ajoute de la marge intérieure pour espacer le texte de la bordure */
+            width: auto;
+            border-right: none;
+            background-color: red;
+        }
+
+        /* Desktop View (992px and above) */
+        @media (min-width: 992px) {
+            .container {
+                width: 30%; /* Ajustez la largeur selon vos besoins */
+                float: left;
+                clear: none; /* Assurez-vous que les sections ne passent pas à la ligne suivante */
+            }
+        }
+
+/* Tablet View (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 50%; /* Les deux premières sections occupent chacune 50% de la largeur */
+        float: left;
+    }
+
+    .container:last-child(3) {
+        width: 100%; /* La troisième section occupe 100% de la largeur, ce qui la fait passer à la ligne suivante */
+        float: none; /* Assurez-vous qu'elle n'est pas flottante pour occuper toute la largeur de la ligne */
+        clear: both; /* Assurez-vous que la troisième section occupe toute la ligne suivante */
+    }
+}
+        /* Mobile View (less than 767px) */
+        @media (max-width: 767px) {
+            .container {
+                width: 100%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Menu</h1>
+    <div class="container">
+        <div class="right-word"><span class="encadre1">Chiken</span></div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur libero nec justo efficitur fermentum. Fusce interdum lorem et arcu fringilla tincidunt.
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="right-word"><span class="encadre3">Beef</span></div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur libero nec justo efficitur fermentum. Fusce interdum lorem et arcu fringilla tincidunt.
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="right-word"><span class="encadre2">Sushi</span></div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur libero nec justo efficitur fermentum. Fusce interdum lorem et arcu fringilla tincidunt.
+        </p>
+    </div>
+</body>
+</html>
+
+
+
+
+
